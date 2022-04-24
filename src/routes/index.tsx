@@ -45,8 +45,8 @@ const Routes: React.ElementType = (): JSX.Element => {
                         )}
                     </App>
                 }
+                <Redirect from='*' to={ClientRoutes[!isLogged ? "LOGIN" : "HOME"]} />
             </SwitchRoutes>
-            <Redirect from='*' to={ClientRoutes[!isLogged ? "LOGIN" : "HOME"]} />
         </BrowserRouter>
     )
 }
