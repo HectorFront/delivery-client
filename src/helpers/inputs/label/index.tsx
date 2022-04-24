@@ -3,7 +3,7 @@ import * as S from './styles';
 /** @name Dependencies */
 import React from 'react';
 /** @name External */
-import { Render, MaterialIcon, InputDefault } from 'helpers/index';
+import { Render, MaterialIcon, InputDefault } from 'helpers';
 import Colors from 'constants/client/colors';
 
 type InputLabelProps = {
@@ -15,14 +15,14 @@ type InputLabelProps = {
 export const InputLabel: React.ElementType = React.memo(({ label, iconLabel, iconLabelImg ,...props }: InputLabelProps): JSX.Element =>
     <>
         <S.Label className="form-label">
-            <Render has={iconLabel}>
+            <Render contains={iconLabel}>
                 <MaterialIcon
                     size="15px"
                     color={Colors.SECONDARY}
                     icon={iconLabel ?? ''}
                 />&nbsp;
             </Render>
-            <Render has={iconLabelImg}>
+            <Render contains={iconLabelImg}>
                 <img
                     width="auto"
                     height="15px"
