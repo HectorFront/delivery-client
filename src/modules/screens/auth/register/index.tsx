@@ -8,19 +8,19 @@ import {reducer} from "./reducer/useReducer";
 interface ChildComponentProps extends RouteComponentProps<any> {}
 
 /** @name Constants */
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
     user: null,
     password: null
 }
 
-const ClientLogin = memo((props: ChildComponentProps) => {
+const ClientRegister = memo((props: ChildComponentProps) => {
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
     return (
         <S.Container>
-            teste
+            <h1>Register</h1>
         </S.Container>
     )
 });
 
-export default withRouter(ClientLogin);
+export default withRouter(ClientRegister);

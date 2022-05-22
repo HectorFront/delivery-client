@@ -1,14 +1,11 @@
 /** @name Dependencies */
 import React, { ReactNode } from 'react';
 
-interface PropsApp {
-    location: {
-        pathname: string
-    },
+interface AppProps {
     children: ReactNode
 }
 
-export const App: React.ElementType = React.memo(({ children }: PropsApp): JSX.Element => {
+export const App: React.ElementType = React.memo(({ children }: AppProps): JSX.Element => {
     return (
         <div>{children}</div>
     );
