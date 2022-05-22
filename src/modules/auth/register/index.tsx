@@ -1,35 +1,26 @@
 /** @name Dependencies */
-import React from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-
-interface IState {
-
-}
-
-interface DataRegisterProps {
-    user: string,
-    password: string
-}
+import {memo, useReducer} from 'react';
+import {withRouter, RouteComponentProps} from 'react-router-dom';
+/** @name Internal */
+import * as S from '../styles';
+import {reducer} from "./reducer/useReducer";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}
 
 /** @name Constants */
-export const INITIAL_DATA_REGISTER: DataRegisterProps = {
+export const INITIAL_STATE = {
     user: null,
     password: null
 }
 
-class ClientRegister extends React.PureComponent<ChildComponentProps, IState> {
-    constructor(props: ChildComponentProps) {
-        super(props);
-        this.state = {...INITIAL_DATA_REGISTER}
-    }
+const ClientRegister = memo((props: ChildComponentProps) => {
+    const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
-    render() {
-        return (
-            <div></div>
-        )
-    }
-}
+    return (
+        <S.Container>
+            teste
+        </S.Container>
+    )
+});
 
 export default withRouter(ClientRegister);

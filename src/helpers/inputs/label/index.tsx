@@ -1,9 +1,9 @@
 /** @name Styled */
 import * as S from './styles';
 /** @name Dependencies */
-import React from 'react';
+import {memo, ElementType} from 'react';
 /** @name External */
-import { Render, MaterialIcon, InputDefault } from 'helpers';
+import {Render, MaterialIcon, InputDefault} from 'helpers/index';
 import Colors from 'constants/client/colors';
 
 type InputLabelProps = {
@@ -12,7 +12,7 @@ type InputLabelProps = {
     iconLabelImg?: string,
 }
 
-export const InputLabel: React.ElementType = React.memo(({ label, iconLabel, iconLabelImg ,...props }: InputLabelProps): JSX.Element =>
+export const InputLabel: ElementType = memo(({ label, iconLabel, iconLabelImg, ...props }: InputLabelProps): JSX.Element =>
     <>
         <S.Label className="form-label">
             <Render contains={iconLabel}>

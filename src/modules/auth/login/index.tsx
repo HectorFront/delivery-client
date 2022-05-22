@@ -1,36 +1,26 @@
-
 /** @name Dependencies */
-import React from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-
-interface IState {
-
-}
-
-interface DataLoginProps {
-    user: string,
-    password: string
-}
+import {memo, useReducer} from 'react';
+import {withRouter, RouteComponentProps} from 'react-router-dom';
+/** @name Internal */
+import * as S from '../styles';
+import {reducer} from "./reducer/useReducer";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}
 
 /** @name Constants */
-export const INITIAL_DATA_LOGIN: DataLoginProps = {
+const INITIAL_STATE = {
     user: null,
     password: null
 }
 
-class ClientLogin extends React.PureComponent<ChildComponentProps, IState> {
-    constructor(props: ChildComponentProps) {
-        super(props);
-        this.state = {...INITIAL_DATA_LOGIN}
-    }
+const ClientLogin = memo((props: ChildComponentProps) => {
+    const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
-    render() {
-        return (
-            <div>teste</div>
-        )
-    }
-}
+    return (
+        <S.Container>
+            teste
+        </S.Container>
+    )
+});
 
 export default withRouter(ClientLogin);

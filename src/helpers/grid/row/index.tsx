@@ -1,15 +1,13 @@
 /** @name Dependencies */
-import React, { ReactNode } from 'react';
+import {memo, ElementType, ReactNode} from 'react';
 
 type RowProps = {
     className?: string,
     children: ReactNode
 }
 
-export const Row: React.ElementType = React.memo(({ className = '', children }: RowProps): JSX.Element => {
-    return (
-        <div className={`row ${className}`}>
-            {children}
-        </div>
-    );
-});
+export const Row: ElementType = memo(({ className = '', children }: RowProps): JSX.Element =>
+    <div className={`row ${className}`}>
+        {children}
+    </div>
+);

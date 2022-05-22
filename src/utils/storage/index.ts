@@ -1,4 +1,3 @@
-
 /**
  * @author Hector Rodrigues da Silva
  * @class AsyncStorage
