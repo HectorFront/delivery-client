@@ -1,10 +1,11 @@
 /** @name Dependencies */
 import {memo, useReducer} from 'react';
 import {withRouter, RouteComponentProps} from 'react-router-dom';
-/** @name Internal */
+/** @name Styled */
 import * as S from '../styles';
+/** @name Internal */
 import {ContinueWith} from "../components";
-import {reducer} from "./reducer/useReducer";
+import {reducer} from "utils/reducer/useReducer";
 /** @name External */
 import {Row, Col, Button, Box} from "helpers";
 

@@ -3,7 +3,7 @@ import {memo, useReducer} from 'react';
 import {withRouter, RouteComponentProps} from 'react-router-dom';
 /** @name Internal */
 import * as S from '../styles';
-import {reducer} from "./reducer/useReducer";
+import {reducer} from "utils/reducer/useReducer";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}
 

@@ -3,19 +3,16 @@ import styled from 'styled-components';
 /** @name Mixins */
 import {flex} from 'mixins/global';
 /** @name External */
-import Colors from 'constants/client/colors';
+import Colors from 'layout/vars/colors';
 
 export const Container = styled.div`
   height: 100%;
   ${flex({ direction: 'row', alignY: 'center', alignX: 'start' })}
 `;
 
-export const Logo = styled.img`
-  width: auto;
-`;
-
 export const Form = styled.div`
   width: 100%;
+  position: relative;
   padding: 25px 10px 10px 10px;
 `;
 
