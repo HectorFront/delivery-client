@@ -1,8 +1,8 @@
 /**
  * @author Hector Rodrigues da Silva
- * @class String
+ * @class FormatString
  */
-export class String {
+export class FormatString {
     /**
      *
      * @param str

@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 /** @name External */
 import {App, Auth} from 'template';
 import {UserContext} from 'context/user';
-import ClientRoutes from 'constants/client/routes';
+import {ClientRoutes} from 'constants/client/routes';
 import {ROUTES, PRIVATE_ROUTES} from 'modules/paths';
 import {Authentication} from 'services/user/authentication';
 
