@@ -17,11 +17,11 @@ export const MaterialIcon: ElementType = memo(({ type, size, color, hover, point
     <S.Icon
         {...props}
         hasHover={hover}
+        pointer={pointer}
         className={`material-icons-${type ?? 'outlined'}`}
         style={{
             fontSize: size ?? '1.2em',
             color: color ?? 'inherit',
-            cursor: pointer ? 'pointer' : 'default',
             ...props?.style
         }}
     >

@@ -6,7 +6,7 @@ import * as S from './styles';
 /** @name Dependencies */
 import {memo, ElementType} from 'react';
 /** @name External */
-import {String} from 'utils';
+import {FormatString} from 'utils';
 
 export const ContinueWith: ElementType = memo(({type = 'facebook', className = '', ...props}): JSX.Element => {
 
@@ -22,9 +22,9 @@ export const ContinueWith: ElementType = memo(({type = 'facebook', className = '
                 width={35}
                 height="auto"
                 src={icons[type]}
-                alt={`Continuar com ${String.capitalize(type)}`}
+                alt={`Continuar com ${FormatString.capitalize(type)}`}
             />
-            <S.Text isFacebook={isFacebook}>Continuar com {String.capitalize(type)}</S.Text>
+            <S.Text isFacebook={isFacebook}>Continuar com {FormatString.capitalize(type)}</S.Text>
         </S.Button>
     );
 });
