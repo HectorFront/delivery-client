@@ -5,6 +5,14 @@ import {flex} from 'layout/mixins/styles';
 /** @name External */
 import Colors from 'layout/vars/colors';
 
+export const Nav = styled.nav.attrs({
+  className: 'navbar navbar-expand-lg bg-white'
+})`
+  padding: 25px;
+  background-color: white;
+  ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center', alignX: 'space-between' })};
+`;
+
 export const ContainerStore = styled.div`
   padding-left: 190px;
   ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center' })};
@@ -20,7 +28,7 @@ export const ContainerLogo = styled.div`
   position: absolute;
   border-radius: 50%;
   border: 4px solid #e7e7e7;
-  box-shadow: 0 1px 16px 2px #b9b9b9;
+  box-shadow: 0 1px 6px 2px #b9b9b9;
   background-color: rgba(255, 255, 255, 0.53);
 `;
 
@@ -45,6 +53,9 @@ export const LocationStore = styled.span`
 `;
 
 export const ContainerLinks = styled.div`
-  width: 100%;
   ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center', alignX: 'space-between' })};
+`;
+
+export const DropdownLinks = styled.div`
+
 `;

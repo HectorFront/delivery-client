@@ -1,13 +1,17 @@
 
 /** @name Dependencies */
-import {memo} from "react";
+import {ElementType, memo} from "react";
 /** @name Internal */
 import * as S from './styles';
 /** @name External */
 import {Button, MaterialIcon} from "helpers";
 
-export const Navbar = memo(({ ...props }) =>
-    <nav className="navbar navbar-expand-lg bg-light p-4">
+type NavbarProps = {
+
+}
+
+export const Navbar: ElementType = memo(({ ...props }: NavbarProps): JSX.Element =>
+    <S.Nav>
         <S.ContainerStore>
             <S.ContainerLogo>
                 <S.Logo
@@ -19,5 +23,16 @@ export const Navbar = memo(({ ...props }) =>
                 <S.LocationStore>Av. Professor Mario Werneck 2851, Buritis - Belo Horizonte</S.LocationStore>
             </S.ContentStore>
         </S.ContainerStore>
-    </nav>
+        <S.ContainerLinks>
+            <div className="btn-group">
+                <button className="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    Large button
+                </button>
+                <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+        </S.ContainerLinks>
+    </S.Nav>
 )
