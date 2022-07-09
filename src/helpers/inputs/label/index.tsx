@@ -12,14 +12,14 @@ type InputLabelProps = {
     iconLabelImg?: string,
 }
 
-export const InputLabel: ElementType = memo(({ label, iconLabel, iconLabelImg, ...props }: InputLabelProps): JSX.Element =>
+export const InputLabel: ElementType = memo(({ label, iconLabel = '', iconLabelImg, ...props }: InputLabelProps): JSX.Element =>
     <>
         <S.Label className="form-label">
             <Render contains={iconLabel}>
                 <MaterialIcon
                     size="15px"
+                    icon={iconLabel}
                     color={Colors.SECONDARY}
-                    icon={iconLabel ?? ''}
                 />&nbsp;
             </Render>
             <Render contains={iconLabelImg}>

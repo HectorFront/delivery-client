@@ -1,10 +1,9 @@
-
 /** @name Dependencies */
 import {ElementType, memo} from "react";
 /** @name Internal */
 import * as S from './styles';
 /** @name External */
-import {Button, MaterialIcon, Dropdown, DropdownItem} from "helpers";
+import {Button, DropdownButton, DropdownItem} from "helpers";
 
 type NavbarProps = {
 
@@ -23,39 +22,47 @@ export const Navbar: ElementType = memo(({ ...props }: NavbarProps): JSX.Element
                 <S.LocationStore>Av. Professor Mario Werneck 2851, Buritis - Belo Horizonte</S.LocationStore>
             </S.ContentStore>
         </S.ContainerStore>
-        <S.ContainerLinks className="shadow-sm">
-            <Dropdown
-                icon='restaurant'
-                text='O que oferecemos?'
+        <S.ContainerNavigations>
+            <S.ContainerLinks className="shadow-sm">
+                <DropdownButton
+                    icon='restaurant'
+                    text='O que oferecemos?'
+                >
+                    <DropdownItem>
+                        Action
+                    </DropdownItem>
+                </DropdownButton>
+                <DropdownButton
+                    icon='schedule'
+                    text='Nossos horários'
+                >
+                    <DropdownItem>
+                        Action
+                    </DropdownItem>
+                </DropdownButton>
+                <DropdownButton
+                    icon='call'
+                    text='Contato'
+                >
+                    <DropdownItem>
+                        Action
+                    </DropdownItem>
+                </DropdownButton>
+                <DropdownButton
+                    icon='not_listed_location'
+                    text='Sobre nós'
+                >
+                    <DropdownItem>
+                        Action
+                    </DropdownItem>
+                </DropdownButton>
+            </S.ContainerLinks>
+            <Button
+                radius
+                title='Entrar'
             >
-                <DropdownItem>
-                    Action
-                </DropdownItem>
-            </Dropdown>
-            <Dropdown
-                icon='schedule'
-                text='Nossos horários'
-            >
-                <DropdownItem>
-                    Action
-                </DropdownItem>
-            </Dropdown>
-            <Dropdown
-                icon='call'
-                text='Contato'
-            >
-                <DropdownItem>
-                    Action
-                </DropdownItem>
-            </Dropdown>
-            <Dropdown
-                icon='not_listed_location'
-                text='Sobre nós'
-            >
-                <DropdownItem>
-                    Action
-                </DropdownItem>
-            </Dropdown>
-        </S.ContainerLinks>
+                Entrar
+            </Button>
+        </S.ContainerNavigations>
     </S.Nav>
-)
+);

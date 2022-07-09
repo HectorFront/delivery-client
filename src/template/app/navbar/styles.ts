@@ -2,8 +2,6 @@
 import styled from 'styled-components';
 /** @name Mixins */
 import {flex} from 'layout/mixins/styles';
-/** @name External */
-import Colors from 'layout/vars/colors';
 
 export const Nav = styled.nav.attrs({
   className: 'navbar navbar-expand-lg bg-white'
@@ -52,7 +50,12 @@ export const LocationStore = styled.span`
   font-size: 16px;
 `;
 
+export const ContainerNavigations = styled.div`
+  ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center' })};
+`;
+
 export const ContainerLinks = styled.div`
+  margin-right: 50px;
   border-radius: 50px;
   ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center', alignX: 'space-between' })};
 `;

@@ -1,15 +1,17 @@
 /** @name Dependencies */
-import React, { ReactNode } from 'react';
+import {ElementType, memo, ReactNode} from 'react';
 import {Navbar} from "./navbar";
+import {BannerHeader} from "./bannerHeader";
 
 interface AppProps {
     children: ReactNode
 }
 
-export const App: React.ElementType = React.memo(({ children }: AppProps): JSX.Element => {
+export const App: ElementType = memo(({ children }: AppProps): JSX.Element => {
     return (
         <>
             <Navbar/>
+            <BannerHeader/>
             <div>{children}</div>
         </>
     );
