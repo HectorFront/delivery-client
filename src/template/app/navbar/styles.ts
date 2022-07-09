@@ -53,9 +53,6 @@ export const LocationStore = styled.span`
 `;
 
 export const ContainerLinks = styled.div`
+  border-radius: 50px;
   ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center', alignX: 'space-between' })};
-`;
-
-export const DropdownLinks = styled.div`
-
 `;

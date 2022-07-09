@@ -4,7 +4,7 @@ import {ElementType, memo} from "react";
 /** @name Internal */
 import * as S from './styles';
 /** @name External */
-import {Button, MaterialIcon} from "helpers";
+import {Button, MaterialIcon, Dropdown, DropdownItem} from "helpers";
 
 type NavbarProps = {
 
@@ -23,16 +23,39 @@ export const Navbar: ElementType = memo(({ ...props }: NavbarProps): JSX.Element
                 <S.LocationStore>Av. Professor Mario Werneck 2851, Buritis - Belo Horizonte</S.LocationStore>
             </S.ContentStore>
         </S.ContainerStore>
-        <S.ContainerLinks>
-            <div className="btn-group">
-                <button className="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                    Large button
-                </button>
-                <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="#">Action</a></li>
-                </ul>
-            </div>
+        <S.ContainerLinks className="shadow-sm">
+            <Dropdown
+                icon='restaurant'
+                text='O que oferecemos?'
+            >
+                <DropdownItem>
+                    Action
+                </DropdownItem>
+            </Dropdown>
+            <Dropdown
+                icon='schedule'
+                text='Nossos horários'
+            >
+                <DropdownItem>
+                    Action
+                </DropdownItem>
+            </Dropdown>
+            <Dropdown
+                icon='call'
+                text='Contato'
+            >
+                <DropdownItem>
+                    Action
+                </DropdownItem>
+            </Dropdown>
+            <Dropdown
+                icon='not_listed_location'
+                text='Sobre nós'
+            >
+                <DropdownItem>
+                    Action
+                </DropdownItem>
+            </Dropdown>
         </S.ContainerLinks>
     </S.Nav>
 )
