@@ -9,8 +9,11 @@ export const Button = styled.button`
   border-radius: 50px;
   background-color: white;
   ${flex({ direction: 'row', alignY: 'center', alignX: 'center' })}
-  
+  &:hover {
+    opacity: .7;
+  }
   &:focus {
+    opacity: 1;
     color: white;
     box-shadow: none;
     background-color: ${Colors.LIGHT};
