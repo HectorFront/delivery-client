@@ -3,7 +3,7 @@ import * as S from './styles';
 /** @name Dependencies */
 import {memo, ElementType} from 'react';
 /** @name External */
-import {Render, MaterialIcon, InputDefault} from 'helpers/index';
+import {Render, MaterialIcon, InputDefault} from 'helpers';
 import Colors from 'layout/vars/colors';
 
 type InputLabelProps = {

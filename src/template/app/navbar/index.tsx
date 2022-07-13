@@ -3,7 +3,7 @@ import {ElementType, memo} from "react";
 /** @name Internal */
 import * as S from './styles';
 /** @name External */
-import {Button, DropdownButton, DropdownItem} from "helpers";
+import {Button, DropdownNav, DropdownNavItem} from "helpers";
 
 type NavbarProps = {
 
@@ -24,38 +24,38 @@ export const Navbar: ElementType = memo(({ ...props }: NavbarProps): JSX.Element
         </S.ContainerStore>
         <S.ContainerNavigations>
             <S.ContainerLinks className="shadow-sm">
-                <DropdownButton
+                <DropdownNav
                     icon='restaurant'
                     text='O que oferecemos?'
                 >
-                    <DropdownItem>
+                    <DropdownNavItem>
                         Action
-                    </DropdownItem>
-                </DropdownButton>
-                <DropdownButton
+                    </DropdownNavItem>
+                </DropdownNav>
+                <DropdownNav
                     icon='schedule'
                     text='Nossos horários'
                 >
-                    <DropdownItem>
+                    <DropdownNavItem>
                         Action
-                    </DropdownItem>
-                </DropdownButton>
-                <DropdownButton
+                    </DropdownNavItem>
+                </DropdownNav>
+                <DropdownNav
                     icon='call'
                     text='Contato'
                 >
-                    <DropdownItem>
+                    <DropdownNavItem>
                         Action
-                    </DropdownItem>
-                </DropdownButton>
-                <DropdownButton
+                    </DropdownNavItem>
+                </DropdownNav>
+                <DropdownNav
                     icon='not_listed_location'
                     text='Sobre nós'
                 >
-                    <DropdownItem>
+                    <DropdownNavItem>
                         Action
-                    </DropdownItem>
-                </DropdownButton>
+                    </DropdownNavItem>
+                </DropdownNav>
             </S.ContainerLinks>
             <Button
                 radius

@@ -4,7 +4,7 @@ import {ElementType, memo, ReactNode} from "react";
 /** @name Internal */
 import * as S from "./styles";
 /** @name External */
-import {MaterialIcon} from "helpers";
+import {MaterialIcon} from 'helpers';
 import Colors from 'layout/vars/colors';
 
 type DropdownProps = {
@@ -14,7 +14,7 @@ type DropdownProps = {
     children: ReactNode
 }
 
-export const DropdownButton: ElementType = memo(({icon, size = 'md', text, children, ...props}: DropdownProps): JSX.Element =>
+export const DropdownNav: ElementType = memo(({icon, size = 'md', text, children, ...props}: DropdownProps): JSX.Element =>
     <div className="btn-group">
         <S.Button
             {...props}
@@ -36,7 +36,7 @@ type DropdownItemProps = {
     children: ReactNode
 }
 
-export const DropdownItem: ElementType = memo(({children, path = '/', ...props}: DropdownItemProps) =>
+export const DropdownNavItem: ElementType = memo(({children, path = '/home', ...props}: DropdownItemProps) =>
     <Link to={path}>
         <S.Item
             {...props}
