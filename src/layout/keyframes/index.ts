@@ -1,5 +1,5 @@
 /** @name Styled */
-import styled, { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components';
 
 export const floating = keyframes`
   0% {
@@ -10,5 +10,14 @@ export const floating = keyframes`
   }
   100% {
     transform: translatey(0px);
+  }
+`;
+
+export const rotate = () => keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 `;

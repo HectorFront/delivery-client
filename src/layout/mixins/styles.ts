@@ -2,8 +2,6 @@
  * @author Hector Rodrigues da Silva
  */
 
-/** @name Styles */
-import {keyframes} from "styled-components";
 /** @name External */
 import Colors from "layout/vars/colors";
 
@@ -30,21 +28,6 @@ export const flex: Function = ({wrap = 'no-wrap', direction = 'row', alignY = 's
   justify-content: ${alignX};
 `;
 
-/**
- *
- */
-export const rotate = () => keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-/**
- *
- */
 export const textEllipsis = () => `
   overflow: hidden;
   white-space: nowrap;

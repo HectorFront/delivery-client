@@ -24,7 +24,7 @@ export const PreparationTime: ElementType = memo(({ menuHeaderHeight }: Preparat
                alignItems: 'center',
            }}>
                 <MaterialIcon
-                    icon='history_toggle_off'
+                    icon='schedule'
                     color={Colors.DEFAULT}
                 />
                &nbsp;{38} - {48} min
