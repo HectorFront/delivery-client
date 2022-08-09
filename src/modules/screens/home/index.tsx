@@ -3,8 +3,9 @@ import {memo, useReducer} from 'react';
 import {withRouter, RouteComponentProps} from 'react-router-dom';
 /** @name Internal */
 import * as S from './styles';
-import {MenuHeader} from "./menuHeader";
+import {MenuHeader} from "./components/menuHeader";
 /** @name External */
+import {CardMenu} from "helpers";
 import {reducer} from "utils/reducer/useReducer";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}
@@ -20,6 +21,12 @@ const ClientLogin = memo((props: ChildComponentProps) => {
     return (
         <S.Content>
             <MenuHeader/>
+            <S.Topic>Promoções</S.Topic>
+            <S.List>
+                <CardMenu/>
+                <CardMenu/>
+                <CardMenu/>
+            </S.List>
         </S.Content>
     )
 });

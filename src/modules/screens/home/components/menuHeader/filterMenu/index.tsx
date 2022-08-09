@@ -7,17 +7,17 @@ import Colors from 'layout/vars/colors';
 import {Card, MaterialIcon} from "helpers";
 
 type WayReceivingProps = {
-    menuHeaderHeight: number | undefined
+    menuHeight: number | undefined
 }
 
-export const FilterMenu: ElementType = memo(({ menuHeaderHeight }: WayReceivingProps): JSX.Element =>
+export const FilterMenu: ElementType = memo(({ menuHeight }: WayReceivingProps): JSX.Element =>
     <Card style={{
         maxWidth: 280,
         borderRadius: 50,
-        height: menuHeaderHeight
+        height: menuHeight
     }}>
-        <S.ContainerWayReceiving>
-            <S.ContentWayReceiving>
+        <S.Container>
+            <S.Content>
                 <span style={{
                     color: '#6a6a6a',
                     display: 'flex',
@@ -29,12 +29,12 @@ export const FilterMenu: ElementType = memo(({ menuHeaderHeight }: WayReceivingP
                     />&nbsp;
                     Filtrar cardápio
                 </span>
-            </S.ContentWayReceiving>
+            </S.Content>
             <MaterialIcon
                 size={30}
                 color='#b1b1b1'
                 icon='keyboard_arrow_down'
             />
-        </S.ContainerWayReceiving>
+        </S.Container>
     </Card>
 );

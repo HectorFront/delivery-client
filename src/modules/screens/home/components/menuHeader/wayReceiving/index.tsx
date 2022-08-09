@@ -6,16 +6,16 @@ import * as S from "./styles";
 import {Card, MaterialIcon} from "helpers";
 
 type WayReceivingProps = {
-    menuHeaderHeight: number | undefined
+    menuHeight: number | undefined
 }
 
-export const WayReceiving: ElementType = memo(({ menuHeaderHeight }: WayReceivingProps): JSX.Element =>
+export const WayReceiving: ElementType = memo(({ menuHeight }: WayReceivingProps): JSX.Element =>
     <Card style={{
         maxWidth: 280,
-        height: menuHeaderHeight
+        height: menuHeight
     }}>
-        <S.ContainerWayReceiving>
-            <S.ContentWayReceiving>
+        <S.Container>
+            <S.Content>
                 <span style={{color: '#6a6a6a'}}>Receber pedido como</span>
                 <span style={{
                     color: '#b1b1b1',
@@ -24,12 +24,12 @@ export const WayReceiving: ElementType = memo(({ menuHeaderHeight }: WayReceivin
                 }}>
                     <MaterialIcon icon="two_wheeler"/>&nbsp;Entrega
                 </span>
-            </S.ContentWayReceiving>
+            </S.Content>
             <MaterialIcon
                 size={30}
                 color='#b1b1b1'
                 icon='keyboard_arrow_down'
             />
-        </S.ContainerWayReceiving>
+        </S.Container>
     </Card>
 );

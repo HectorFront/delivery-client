@@ -7,7 +7,7 @@ import Colors from 'layout/vars/colors';
 
 export const Container = styled.div`
   height: 100%;
-  ${flex({ direction: 'row', alignY: 'center', alignX: 'start' })}
+  ${flex({ direction: 'row', alignY: 'center', alignX: 'flex-start' })}
 `;
 
 export const Form = styled.div`

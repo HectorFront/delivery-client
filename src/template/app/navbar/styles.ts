@@ -65,7 +65,7 @@ export const Logo = styled.img`
 `;
 
 export const ContentStore = styled.div`
-  ${flex({ wrap: 'wrap', direction: 'column', alignY: 'start', alignX: 'start' })};
+  ${flex({ wrap: 'wrap', direction: 'column', alignY: 'start', alignX: 'flex-start' })};
 `;
 
 export const NameStore = styled.h1`

@@ -7,17 +7,17 @@ import Colors from "layout/vars/colors";
 import {Card, MaterialIcon} from "helpers";
 
 type PreparationTimeProps = {
-    menuHeaderHeight: number | undefined
+    menuHeight: number | undefined
 }
 
-export const PreparationTime: ElementType = memo(({ menuHeaderHeight }: PreparationTimeProps): JSX.Element =>
+export const PreparationTime: ElementType = memo(({ menuHeight }: PreparationTimeProps): JSX.Element =>
     <Card style={{
         minWidth: 150,
         borderRadius: 12,
-        height: menuHeaderHeight,
+        height: menuHeight,
         border: `1px solid ${Colors.DEFAULT}`
     }}>
-        <S.ContainerPreparationTime>
+        <S.Container>
            <span style={{
                color: Colors.DEFAULT,
                display: 'flex',
@@ -30,6 +30,6 @@ export const PreparationTime: ElementType = memo(({ menuHeaderHeight }: Preparat
                &nbsp;{38} - {48} min
            </span>
             <span style={{ fontSize: 14 }}>Tempo de preparo</span>
-        </S.ContainerPreparationTime>
+        </S.Container>
     </Card>
 );

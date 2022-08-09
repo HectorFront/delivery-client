@@ -4,5 +4,5 @@ import styled from 'styled-components';
 import { flex } from 'layout/mixins/styles';
 
 export const Label = styled.label`
-  ${flex({ wrap: 'no-wrap', direction: 'row', alignY: 'center', alignX: 'start' })}
+  ${flex({ wrap: 'no-wrap', direction: 'row', alignY: 'center', alignX: 'flex-start' })}
 `;
