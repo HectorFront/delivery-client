@@ -10,7 +10,7 @@ type OrderLocationProps = {
 }
 
 export const OrderLocation = memo(({ menuHeight }: OrderLocationProps): JSX.Element =>
-    <S.Container>
+    <S.Container style={{ height: menuHeight }}>
         <MaterialIcon
             pointer
             icon='location_on'

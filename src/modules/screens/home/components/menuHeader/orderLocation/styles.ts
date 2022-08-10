@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {flex} from 'layout/mixins/styles';
 
 export const Container = styled.div`
-  height: 100%;
   cursor: pointer;
   margin-top: 30px;
   ${flex({ direction: 'row', alignY: 'center', alignX: 'space-between' })};
