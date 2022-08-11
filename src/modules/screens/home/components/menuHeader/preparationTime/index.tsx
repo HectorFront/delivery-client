@@ -12,7 +12,7 @@ type PreparationTimeProps = {
 
 export const PreparationTime: ElementType = memo(({ menuHeight }: PreparationTimeProps): JSX.Element =>
     <Card style={{
-        minWidth: 150,
+        maxWidth: 150,
         borderRadius: 12,
         height: menuHeight,
         border: `1px solid ${Colors.DEFAULT}`

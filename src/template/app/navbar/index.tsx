@@ -6,6 +6,8 @@ import * as S from './styles';
 import Colors from "layout/vars/colors";
 import {Button, Dropdown, DropdownItem, MaterialIcon} from "helpers";
 
+const COLOR_DAY_ITEM = { color: Colors.SECONDARY };
+
 export const Navbar: ElementType = memo((_props): JSX.Element =>
     <S.Nav>
         <S.ContainerStore>
@@ -32,36 +34,72 @@ export const Navbar: ElementType = memo((_props): JSX.Element =>
         <S.ContainerNavigations>
             <S.ContainerLinks>
                 <Dropdown
-                    icon='restaurant'
+                    icon='store'
                     text='O que oferecemos?'
                 >
-                    <DropdownItem>
-                        Action
-                    </DropdownItem>
+                    <DropdownItem>Feira</DropdownItem>
+                    <DropdownItem>Carnes</DropdownItem>
+                    <DropdownItem>Limpeza</DropdownItem>
+                    <DropdownItem>Alimentos Básicos</DropdownItem>
                 </Dropdown>
                 <Dropdown
                     icon='schedule'
+                    clickInsideNotClose
                     text='Nossos horários'
                 >
                     <DropdownItem>
-                        Action
+                        <span style={COLOR_DAY_ITEM}>DOM</span>
+                        &nbsp;08:00 às 12:00
+                    </DropdownItem>
+                    <DropdownItem>
+                        <span style={COLOR_DAY_ITEM}>SEG</span>
+                        &nbsp;08:00 às 19:00
+                    </DropdownItem>
+                    <DropdownItem>
+                        <span style={COLOR_DAY_ITEM}>TER</span>&nbsp;
+                        08:00 às 19:00
+                    </DropdownItem>
+                    <DropdownItem>
+                        <span style={COLOR_DAY_ITEM}>QUA</span>&nbsp;
+                        08:00 às 19:00
+                    </DropdownItem>
+                    <DropdownItem selected>
+                        <span style={COLOR_DAY_ITEM}>QUI</span>&nbsp;
+                        08:00 às 19:00
+                    </DropdownItem>
+                    <DropdownItem>
+                        <span style={COLOR_DAY_ITEM}>SEX</span>&nbsp;
+                        08:00 às 21:00
+                    </DropdownItem>
+                    <DropdownItem>
+                        <span style={COLOR_DAY_ITEM}>SÁB</span>&nbsp;
+                        08:00 às 21:00
                     </DropdownItem>
                 </Dropdown>
                 <Dropdown
                     icon='call'
                     text='Contato'
+                    clickInsideNotClose
                 >
-                    <DropdownItem>
-                        Action
+                    <DropdownItem href={'tel:(14) 98212-5480'}>
+                        <MaterialIcon
+                            icon='phone_forwarded'
+                            color={Colors.SECONDARY}
+                        />&nbsp;(14) 98212-5480
+                    </DropdownItem>
+                    <DropdownItem href={'mailto:bbeteto@gmail.com'}>
+                        <MaterialIcon
+                            icon='forward_to_inbox'
+                            color={Colors.SECONDARY}
+                        />&nbsp;bbeteto@gmail.com
                     </DropdownItem>
                 </Dropdown>
                 <Dropdown
-                    icon='not_listed_location'
+                    icon='info'
                     text='Sobre nós'
                 >
-                    <DropdownItem>
-                        Action
-                    </DropdownItem>
+                    <DropdownItem>Site Institucional</DropdownItem>
+                    <DropdownItem>Uma breve descrição</DropdownItem>
                 </Dropdown>
             </S.ContainerLinks>
             <Button

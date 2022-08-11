@@ -7,7 +7,7 @@ import * as Interface from "./styles.interfaces";
 
 export const ContainerOpacity = styled.div`
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-color: #720000;
 `;
 

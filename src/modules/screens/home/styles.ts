@@ -3,7 +3,7 @@ import styled from 'styled-components';
 /** @name Mixins */
 import {flex} from "layout/mixins/styles";
 
-const BREAKPOINT_HD = 1199;
+const BREAKPOINT_HD = 1500;
 const BREAKPOINT_TABLET = 600;
 
 export const Content = styled.main`

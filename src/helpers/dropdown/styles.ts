@@ -5,6 +5,8 @@ import {flex} from "layout/mixins/styles";
 /** @name External */
 import Colors from 'layout/vars/colors';
 
+import * as Interface from './styles.interfaces';
+
 export const Button = styled.button`
   border-radius: 50px;
   background-color: white;
@@ -22,7 +24,17 @@ export const Button = styled.button`
 
 export const Item = styled.li.attrs({
   className: 'dropdown-item'
-})`
+})<Interface.DropdownItemProps>`
+  ${props => props.selected && 
+      `
+       color: white;
+       background-color: #181818;
+       &:hover {
+         color: white;
+         background-color: #181818;
+       }
+      `
+  }
   &:active, &:focus {
     background-color: ${Colors.DEFAULT} !important;
   }

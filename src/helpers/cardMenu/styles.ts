@@ -8,7 +8,6 @@ import * as Interface from "./styles.interfaces";
 export const Card = styled.div`
   width: 500px;
   height: 350px;
-  z-index: 1000;
   padding: 20px;
   cursor: pointer;
   transition: .2s;
@@ -20,6 +19,7 @@ export const Card = styled.div`
   &:hover {
     transition: .2s;
     border: 1px solid #d7d7d7;
+    transform: translateY(-5px);
   }
 `;
 

@@ -2,6 +2,8 @@
 import styled from 'styled-components';
 /** @name Mixins */
 import {flex, hideDisplay} from 'layout/mixins/styles';
+/** @name External */
+import zIndex from "layout/vars/zIndex";
 
 const BREAKPOINT_HD = 1555;
 const BREAKPOINT_TABLET = 600;
@@ -9,10 +11,17 @@ const BREAKPOINT_TABLET = 600;
 export const Nav = styled.nav.attrs({
   className: 'navbar navbar-expand-lg bg-white'
 })`
+  width: 100%;
   padding: 25px;
+  z-index: ${zIndex.fixed};
   background-color: white;
+  position: fixed !important;
   ${flex({ wrap: 'wrap', direction: 'row', alignY: 'center', alignX: 'space-between' })};
 
+  @media (max-width: ${BREAKPOINT_HD}px) {
+    position: relative !important;
+  }
+  
   @media (max-width: ${BREAKPOINT_TABLET}px) {
     padding: 25px 15px;
   }
