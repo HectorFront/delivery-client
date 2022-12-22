@@ -4,17 +4,17 @@ import {ElementType, memo} from 'react';
 import * as S from "./styles";
 /** @name External */
 import Colors from 'layout/vars/colors';
-import {Card, MaterialIcon} from "helpers";
+import {Card, MaterialIcon} from "components";
 
 type WayReceivingProps = {
-    menuHeight: number | undefined
+    height: number | undefined
 }
 
-export const FilterMenu: ElementType = memo(({ menuHeight }: WayReceivingProps): JSX.Element =>
+export const FilterMenu: ElementType = memo(({ height }: WayReceivingProps): JSX.Element =>
     <Card style={{
+        height,
         maxWidth: 280,
-        borderRadius: 50,
-        height: menuHeight
+        borderRadius: 50
     }}>
         <S.Container>
             <S.Content>

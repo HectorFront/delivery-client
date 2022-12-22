@@ -9,38 +9,42 @@ import {OrderLocation} from "./orderLocation";
 import {PreparationTime} from "./preparationTime";
 import {MoreInformation} from "./moreInformation";
 /** @name External */
-import {Row, Col} from 'helpers';
+import {Row, Col} from 'components';
 
 export const MENU_HEADER_HEIGHT = 70;
 
 export const MenuHeader: ElementType = memo((_props): JSX.Element =>
     <S.Container>
         <Row>
-            <Col cols='12 12 12 7 7'>
-                <Search/>
-                <br/>
-            </Col>
-            <Col cols='6 6 6 3 3'>
-                <WayReceiving
-                    menuHeight={MENU_HEADER_HEIGHT}
-                />
-                <br/>
-            </Col>
-            <Col cols='6 6 6 2 2'>
-                <PreparationTime
-                    menuHeight={MENU_HEADER_HEIGHT}
-                />
-                <br/>
+            <Col>
+                <S.SubMenu>
+                    <Col cols='12 12 10 10 10'>
+                        <Row>
+                            <Col cols='12 12 10 10 9'>
+                                <Search/>
+                            </Col>
+                            <Col cols='12 12 4 4 3'>
+                                <WayReceiving
+                                    height={MENU_HEADER_HEIGHT}
+                                />
+                            </Col>
+                        </Row>
+                    </Col>
+                    <PreparationTime
+                        height={MENU_HEADER_HEIGHT}
+                    />
+                </S.SubMenu>
             </Col>
         </Row>
+        <br/>
         <Row>
             <Col>
                 <S.SubMenu>
                     <FilterMenu
-                        menuHeight={MENU_HEADER_HEIGHT}
+                        height={MENU_HEADER_HEIGHT}
                     />
                     <OrderLocation
-                        menuHeight={MENU_HEADER_HEIGHT}
+                        height={MENU_HEADER_HEIGHT}
                     />
                 </S.SubMenu>
             </Col>

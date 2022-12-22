@@ -3,7 +3,7 @@ import {ElementType, memo} from "react";
 /** @name Internal */
 import * as S from "./styles";
 /** @name External */
-import {OffCanvasBody, OffCanvasContainer, OffCanvasHeader} from "helpers";
+import {OffCanvasBody, OffCanvasContainer, OffCanvasHeader} from "components";
 
 export const ID_OFF_CANVAS_MORE_INFORMATION = 'moreInformationOffCanvas';
 

@@ -2,15 +2,15 @@
 import {memo} from "react";
 /** @name Internal */
 import * as S from './styles';
-import {MaterialIcon} from "helpers";
+import {MaterialIcon} from "components";
 import Colors from "layout/vars/colors";
 
 type OrderLocationProps = {
-    menuHeight: number | undefined
+    height: number | undefined
 }
 
-export const OrderLocation = memo(({ menuHeight }: OrderLocationProps): JSX.Element =>
-    <S.Container style={{ height: menuHeight }}>
+export const OrderLocation = memo(({ height }: OrderLocationProps): JSX.Element =>
+    <S.Container style={{ height }}>
         <MaterialIcon
             pointer
             icon='location_on'

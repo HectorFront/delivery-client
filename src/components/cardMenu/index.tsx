@@ -3,7 +3,7 @@ import {ElementType, memo} from "react";
 /** @name Internal */
 import * as S from './styles';
 /** @name External */
-import {MaterialIcon} from "helpers";
+import {MaterialIcon} from "components";
 import Colors from "layout/vars/colors";
 
 const image = 'https://static-images.ifood.com.br/image/upload/t_low/pratos/08746e79-0fcd-4bd9-8487-52b2cb46fe81/202204012354_JALD_i.jpg';

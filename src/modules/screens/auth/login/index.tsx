@@ -7,7 +7,7 @@ import * as S from '../styles';
 import {ContinueWith} from "../components";
 import {reducer} from "utils/reducer/useReducer";
 /** @name External */
-import {Row, Col, Button, Box} from "helpers";
+import {Row, Col, Button, Box} from "components";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}
 

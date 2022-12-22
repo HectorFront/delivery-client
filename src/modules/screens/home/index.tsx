@@ -5,7 +5,7 @@ import {withRouter, RouteComponentProps} from 'react-router-dom';
 import * as S from './styles';
 import {MenuHeader} from "./components/menuHeader";
 /** @name External */
-import {CardMenu} from "helpers";
+import {CardMenu} from "components";
 import {reducer} from "utils/reducer/useReducer";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}

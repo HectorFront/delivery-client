@@ -4,7 +4,7 @@ import {ElementType, memo} from "react";
 import * as S from './styles';
 /** @name External */
 import Colors from "layout/vars/colors";
-import {Button, Dropdown, DropdownItem, MaterialIcon} from "helpers";
+import {Button, Dropdown, DropdownItem, MaterialIcon} from "components";
 
 const COLOR_DAY_ITEM = { color: Colors.SECONDARY };
 

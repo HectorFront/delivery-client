@@ -3,17 +3,20 @@ import {ElementType, memo} from 'react';
 /** @name Internal */
 import * as S from "./styles";
 /** @name External */
-import {Card, MaterialIcon} from "helpers";
+import {Card, MaterialIcon} from "components";
 
 type WayReceivingProps = {
-    menuHeight: number | undefined
+    height: number | undefined
 }
 
-export const WayReceiving: ElementType = memo(({ menuHeight }: WayReceivingProps): JSX.Element =>
-    <Card style={{
-        maxWidth: 280,
-        height: menuHeight
-    }}>
+export const WayReceiving: ElementType = memo(({ height }: WayReceivingProps): JSX.Element =>
+    <Card
+        className='mt-1'
+        style={{
+            height,
+            maxWidth: 280,
+        }}
+    >
         <S.Container>
             <S.Content>
                 <span style={{color: '#6a6a6a'}}>Receber pedido como</span>

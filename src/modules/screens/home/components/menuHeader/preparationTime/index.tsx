@@ -4,19 +4,22 @@ import {ElementType, memo} from "react";
 import * as S from "./styles";
 /** @name External */
 import Colors from "layout/vars/colors";
-import {Card, MaterialIcon} from "helpers";
+import {Card, MaterialIcon} from "components";
 
 type PreparationTimeProps = {
-    menuHeight: number | undefined
+    height: number | undefined
 }
 
-export const PreparationTime: ElementType = memo(({ menuHeight }: PreparationTimeProps): JSX.Element =>
-    <Card style={{
-        maxWidth: 150,
-        borderRadius: 12,
-        height: menuHeight,
-        border: `1px solid ${Colors.DEFAULT}`
-    }}>
+export const PreparationTime: ElementType = memo(({ height }: PreparationTimeProps): JSX.Element =>
+    <Card
+        className='mt-1'
+        style={{
+            height,
+            maxWidth: 150,
+            borderRadius: 12,
+            border: `1px solid ${Colors.DEFAULT}`
+        }}
+    >
         <S.Container>
            <span style={{
                color: Colors.DEFAULT,

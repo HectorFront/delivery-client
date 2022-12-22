@@ -2,8 +2,9 @@
 import {memo, ElementType, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 
 type ColProps = {
-    style?: object,
     cols?: string,
+    style?: object,
+    relative?: boolean,
     children: ReactNode
 }
 
@@ -45,10 +46,12 @@ export const Col: ElementType = memo(({ cols = '', children, ...props }: ColProp
         xxl = MAX_SIZE_COLUMN
     ]: ColumnsProps = columns;
 
+    const relative = props.relative ? ' h-100' : '';
+    const grid = `col-12 col-sm-${sm} col-md-${md} col-lg-${lg} col-xl-${xl} col-xxl-${xxl}`;
     return (
         <div
             {...props}
-            className={`col-12 col-sm-${sm} col-md-${md} col-lg-${lg} col-xl-${xl} col-xxl-${xxl}${className}`}
+            className={`${grid}${className}${relative}`}
         >
             {children}
         </div>
