@@ -7,10 +7,11 @@ import * as Interface from "./styles.interfaces";
 
 export const Card = styled.div`
   width: 500px;
-  height: 350px;
+  height: auto;
   padding: 20px;
   cursor: pointer;
   transition: .2s;
+  min-height: 350px;
   border-radius: 14px;
   background-color: white;
   border: 1px solid #f2f2f2;

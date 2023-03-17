@@ -23,7 +23,7 @@ export const Button = styled.button`
 `;
 
 export const Item = styled.li.attrs({
-  className: 'dropdown-item'
+  className: 'dropdown-item d-flex flex-row align-items-center justify-content-between'
 })<Interface.DropdownItemProps>`
   ${props => props.selected && 
       `

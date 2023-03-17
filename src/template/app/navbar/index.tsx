@@ -48,12 +48,12 @@ export const Navbar: ElementType = memo((_props): JSX.Element =>
                     text='Nossos horários'
                 >
                     <DropdownItem>
-                        <span style={COLOR_DAY_ITEM}>DOM</span>
-                        &nbsp;08:00 às 12:00
+                        <span style={COLOR_DAY_ITEM}>DOM</span>&nbsp;
+                        08:00 às 12:00
                     </DropdownItem>
                     <DropdownItem>
-                        <span style={COLOR_DAY_ITEM}>SEG</span>
-                        &nbsp;08:00 às 19:00
+                        <span style={COLOR_DAY_ITEM}>SEG</span>&nbsp;
+                        08:00 às 19:00
                     </DropdownItem>
                     <DropdownItem>
                         <span style={COLOR_DAY_ITEM}>TER</span>&nbsp;
@@ -82,16 +82,22 @@ export const Navbar: ElementType = memo((_props): JSX.Element =>
                     clickInsideNotClose
                 >
                     <DropdownItem href={'tel:(14) 98212-5480'}>
-                        <MaterialIcon
-                            icon='phone_forwarded'
-                            color={Colors.SECONDARY}
-                        />&nbsp;(14) 98212-5480
+                        <div className="d-flex align-items-center">
+                            <MaterialIcon
+                                icon='phone_forwarded'
+                                color={Colors.SECONDARY}
+                            />
+                            &nbsp;(14) 98212-5480
+                        </div>
                     </DropdownItem>
                     <DropdownItem href={'mailto:bbeteto@gmail.com'}>
-                        <MaterialIcon
-                            icon='forward_to_inbox'
-                            color={Colors.SECONDARY}
-                        />&nbsp;bbeteto@gmail.com
+                        <div className="d-flex align-items-center">
+                            <MaterialIcon
+                                icon='forward_to_inbox'
+                                color={Colors.SECONDARY}
+                            />
+                            &nbsp;bbeteto@gmail.com
+                        </div>
                     </DropdownItem>
                 </Dropdown>
                 <Dropdown

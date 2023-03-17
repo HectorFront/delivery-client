@@ -47,9 +47,8 @@ export const DropdownItem: ElementType = memo(({ children, path, href, selected,
         <S.Item
             {...props}
             selected={selected}
-            className="dropdown-item"
         >
-            <span>{children}</span>
+            {children}
         </S.Item>
     );
     if(path) {

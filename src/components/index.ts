@@ -9,4 +9,5 @@ export * from './render';
 export * from './fallback';
 export * from './dropdown';
 export * from './cardMenu';
+export * from './carousel';
 export * from './offCanvas';
