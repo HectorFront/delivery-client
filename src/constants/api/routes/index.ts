@@ -3,5 +3,5 @@ type APIRoutesProps = {
 }
 
 export const APIRoutes: APIRoutesProps  = {
-    LOGIN: 'login',
+    LOGIN: 'auth/v1/token',
 };

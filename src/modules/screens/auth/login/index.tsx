@@ -1,5 +1,5 @@
 /** @name Dependencies */
-import {memo, useReducer} from 'react';
+import {memo, useEffect, useReducer} from 'react';
 import {withRouter, RouteComponentProps} from 'react-router-dom';
 /** @name Styled */
 import * as S from '../styles';
@@ -8,6 +8,7 @@ import {ContinueWith} from "../components";
 import {reducer} from "utils/reducer/useReducer";
 /** @name External */
 import {Row, Col, Button, Box} from "components";
+import {ModelLogin} from "./model";
 
 interface ChildComponentProps extends RouteComponentProps<any> {}
 
@@ -20,6 +21,16 @@ const INITIAL_STATE = {
 const ClientLogin = memo((props: ChildComponentProps) => {
 
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+
+    const authClient = () => {
+        const body = { username: 'yako@gmail.com', password: 'kgb8y2kk' };
+        ModelLogin.userLogin(body)
+            .then(auth => console.log(auth))
+            .catch(err => console.log(err));
+    };
+
+    useEffect(() => {
+    },[]);
 
     return (
         <S.Container className="container-xxl">

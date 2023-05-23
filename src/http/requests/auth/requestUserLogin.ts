@@ -7,9 +7,9 @@ export class RequestUserLogin extends ConstructorRequest {
      * @param body
      */
     constructor(body) {
-        const url: string = APIRoutes.login;
+        const url: string = APIRoutes.LOGIN;
         const headers: Headers = new Headers();
-        headers.append("Content-Type", "application/json");
+        headers.append("Content-Type", "application/x-www-form-urlencoded");
         super({ url, headers, method: 'POST', body });
     }
 }
